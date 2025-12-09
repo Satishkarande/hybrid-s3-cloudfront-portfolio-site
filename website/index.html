@@ -1,11 +1,118 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Satish AWS Project 1</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1>Welcome to My Static Website Hosted on S3 + CloudFront</h1>
-    <p>This project is part of my AWS learning journey!</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satish | Cloud Projects Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            text-align: center;
+        }
+
+        header {
+            padding: 40px 20px;
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #58a6ff;
+        }
+
+        h2 {
+            color: #58a6ff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: #8b949e;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #58a6ff;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            padding: 20px;
+            color: #8b949e;
+            margin-top: 40px;
+            border-top: 1px solid #30363d;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Satish</h1>
+        <p>AWS Cloud Enthusiast | Solutions Architect | DevOps Learner</p>
+    </header>
+
+    <div class="container">
+        <h2>Featured Cloud Project</h2>
+
+        <div class="card">
+            <h3>Secure Static Website Hosting (S3 + CloudFront + OAI)</h3>
+            <p>
+                This website is hosted on a private S3 bucket and served securely using 
+                Amazon CloudFront with Origin Access Identity (OAI). The architecture 
+                follows AWS best practices for global delivery, caching, and security.
+            </p>
+            <p>
+                <strong>Status:</strong> Successfully deployed and running on CloudFront.  
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>About This Deployment</h3>
+            <p>
+                • S3 bucket is fully private (block public access ON)<br />
+                • CloudFront serves the content securely over HTTPS<br />
+                • Bucket access allowed only through OAI<br />
+                • Website files deployed using AWS CLI (s3 sync)<br />
+                • Cache invalidation handled via CloudFront invalidation API
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        Built on AWS | S3 • CloudFront • OAI • CLI  
+    </footer>
+
+</body>
 </html>

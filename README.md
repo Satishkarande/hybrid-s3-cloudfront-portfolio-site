@@ -1,5 +1,7 @@
 Hybrid S3 + CloudFront Static Website Deployment
 
+🔗 **Live Demo: https://dwfvmf1nfh6ut.cloudfront.net/
+
 A Production-ready Static Hosting Architecture on AWS (Free-Tier Friendly)
 
  Project Overview
@@ -177,6 +179,8 @@ Deploy architecture using:
 AWS Console
 
 AWS CLI
+
+
 
 
 

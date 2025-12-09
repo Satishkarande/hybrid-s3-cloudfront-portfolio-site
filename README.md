@@ -2,7 +2,7 @@ Hybrid S3 + CloudFront Static Website Deployment
 
 A Production-ready Static Hosting Architecture on AWS (Free-Tier Friendly)
 
-📌 Project Overview
+ Project Overview
 
 This project demonstrates how to architect, deploy, and deliver a high-availability, low-latency static website using Amazon S3 + Amazon CloudFront, following real-world AWS Solutions Architect patterns.
 
@@ -39,7 +39,7 @@ This project is part of my AWS portfolio and showcases strong understanding of c
                            |
                            +--> Stores HTML, CSS, JS
 
-🧰 AWS Services Used
+ AWS Services Used
 Service	Purpose
 Amazon S3	Stores the static website files privately
 Amazon CloudFront	Global CDN to deliver content fast
@@ -71,7 +71,6 @@ Enable OAC
 
 Default Root Object: index.html
 
-Price Class: North America & Europe (free tier optimized)
 
 4️⃣ Upload Website Updates
 aws s3 sync . s3://your-bucket-name --delete

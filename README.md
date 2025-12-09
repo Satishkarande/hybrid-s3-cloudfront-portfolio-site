@@ -1,26 +1,26 @@
-Hybrid S3 + CloudFront Static Website Deployment
+**Hybrid S3 + CloudFront Static Website Deployment**
 
-🔗 **Live Demo: https://dwfvmf1nfh6ut.cloudfront.net/
+**🔗 **Live Demo: https://dwfvmf1nfh6ut.cloudfront.net/**
 
 A Production-ready Static Hosting Architecture on AWS (Free-Tier Friendly)
 
- Project Overview
+** Project Overview**
 
 This project demonstrates how to architect, deploy, and deliver a high-availability, low-latency static website using Amazon S3 + Amazon CloudFront, following real-world AWS Solutions Architect patterns.
 
 The website is stored privately in S3 and delivered globally via CloudFront, ensuring:
 
-⚡ Faster content delivery
+**⚡ Faster content delivery
 
 🔒 Secure access (Origin Access Control)
 
 🏗️ Fully serverless, scalable architecture
 
-💰 Cost-efficient (100% free tier)
+💰 Cost-efficient (100% free tier)**
 
 This project is part of my AWS portfolio and showcases strong understanding of cloud architecture, security, and deployment workflows.
 
-🏗️ Architecture Diagram (ASCII)
+** Architecture Diagram **
                +------------------------+
                |      User Browser      |
                +-----------+------------+
@@ -41,15 +41,15 @@ This project is part of my AWS portfolio and showcases strong understanding of c
                            |
                            +--> Stores HTML, CSS, JS
 
- AWS Services Used
-Service	Purpose
-Amazon S3	Stores the static website files privately
-Amazon CloudFront	Global CDN to deliver content fast
-Origin Access Control (OAC)	Ensures S3 is not publicly accessible
-IAM	Policies for secure bucket access
-CloudFront Invalidations	Cache refresh when updating website
-⚙️ Deployment Steps (High-Level)
-1️⃣ Create S3 Bucket
+** AWS Services Used** 
+1.Amazon S3	Stores the static website files privately
+2.Amazon CloudFront	Global CDN to deliver content fast
+3.Origin Access Control (OAC)	Ensures S3 is not publicly accessible
+4.IAM	Policies for secure bucket access
+5.CloudFront Invalidations	Cache refresh when updating website
+ **
+ Deployment Steps **
+1. Create S3 Bucket
 
 Name: project1-<yourname>-static-site
 
@@ -59,11 +59,11 @@ Enable versioning (optional)
 
 Upload website files (index.html, style.css, etc.)
 
-2️⃣ Apply Bucket Policy for CloudFront
+2. Apply Bucket Policy for CloudFront
 
 S3 bucket remains private, accessible only through CloudFront OAC.
 
-3️⃣ Create CloudFront Distribution
+3. Create CloudFront Distribution
 
 Origin: S3 bucket
 
@@ -74,22 +74,22 @@ Enable OAC
 Default Root Object: index.html
 
 
-4️⃣ Upload Website Updates
-aws s3 sync . s3://your-bucket-name --delete
+4. Upload Website Updates
+aws s3 sync . s3://satish-secure-site-2025 --delete
 
-5️⃣ Invalidate CloudFront Cache
-aws cloudfront create-invalidation --distribution-id XXXX --paths "/*"
+5. Invalidate CloudFront Cache
+aws cloudfront create-invalidation --E34HY69PDXL04M --paths "/*"
 
-📝 Project Highlights
-🌍 Global Performance
+ Project Highlights
+ Global Performance
 
 CloudFront reduces latency by caching content across 450+ POPs worldwide.
 
-🔐 Strong Security
+** Strong Security**
 
 S3 is fully private; only CloudFront can access it using OAC.
 
-🧱 Production-Ready Architecture
+ Production-Ready Architecture
 
 Commonly used for:
 
@@ -99,7 +99,7 @@ Documentation portals
 
 Micro-frontend static apps
 
-🎯 Why This Project Matters (Architect Perspective)
+** Why This Project Matters**
 
 As a Solutions Architect, this project proves capability to:
 
@@ -113,41 +113,8 @@ Manage caching, invalidations, and content updates
 
 Apply real-world AWS architecture patterns
 
-💼 Interview-Style Questions & Answers
-▶️ Q: Why use CloudFront instead of S3 static hosting alone?
 
-A: CloudFront provides:
-
-Global edge caching
-
-HTTPS by default
-
-DDoS protection via AWS Shield
-
-Lower latency
-
-Less bandwidth cost
-
-▶️ Q: How does CloudFront securely access the S3 bucket?
-
-A: Through Origin Access Control (OAC).
-The S3 bucket policy grants access only to the CloudFront distribution, preventing public exposure.
-
-▶️ Q: How are updates deployed?
-
-Upload new files to S3
-
-Create CloudFront invalidation
-
-Edge caches refresh → users get the latest version
-
-▶️ Q: How is availability preserved?
-
-CloudFront fails over to nearest POP automatically
-
-Cached content can still be served even if S3 is slow
-
-🚧 Challenges Faced
+**Challenges Faced**
 
 Understanding correct OAC configuration
 
@@ -157,7 +124,7 @@ Cache not updating until invalidation
 
 Handling CloudFront propagation delays
 
-📚 Key Learnings
+** Key Learnings**
 
 Production-grade static hosting patterns
 
@@ -167,7 +134,7 @@ How to secure S3 with OAC
 
 Full deployment lifecycle (upload → invalidate → deliver)
 
-🚀 How to Replicate This Project
+** How to Replicate This Project**
 
 Clone the repo:
 

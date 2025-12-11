@@ -1,118 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Satish | Cloud Projects Portfolio</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0d1117;
-            color: #c9d1d9;
-            text-align: center;
-        }
-
-        header {
-            padding: 40px 20px;
-            background: #161b22;
-            border-bottom: 1px solid #30363d;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #58a6ff;
-        }
-
-        h2 {
-            color: #58a6ff;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.05rem;
-            color: #8b949e;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: 40px auto;
-        }
-
-        .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 20px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            border-color: #58a6ff;
-            transform: translateY(-3px);
-        }
-
-        footer {
-            padding: 20px;
-            color: #8b949e;
-            margin-top: 40px;
-            border-top: 1px solid #30363d;
-        }
-
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Satish • Cloud Projects</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-
-    <header>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Satish logo" />
         <h1>Satish</h1>
-        <p>AWS Cloud Enthusiast | Solutions Architect | DevOps Learner</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" data-ajax>About</a>
+        <a href="projects.html" data-ajax>Projects</a>
+        <a href="contact.html" data-ajax>Contact</a>
+      </nav>
     </header>
 
-    <div class="container">
-        <h2>Featured Cloud Project</h2>
-
-        <div class="card">
-            <h3>Secure Static Website Hosting (S3 + CloudFront + OAI)</h3>
-            <p>
-                This website is hosted on a private S3 bucket and served securely using 
-                Amazon CloudFront with Origin Access Identity (OAI). The architecture 
-                follows AWS best practices for global delivery, caching, and security.
-            </p>
-            <p>
-                <strong>Status:</strong> Successfully deployed and running on CloudFront.  
-            </p>
+    <!-- START main-content (dynamic area) -->
+    <div id="main-content">
+      <section class="hero">
+        <div class="hero-left">
+          <h2>Secure Cloud Projects • S3 + CloudFront + OAI</h2>
+          <p>Portfolio showcasing secure, production-ready AWS patterns implemented with CLI automation and Cloud architecture best practices.</p>
+          <p><a class="btn" href="projects.html">See Projects</a></p>
         </div>
-
-        <div class="card">
-            <h3>About This Deployment</h3>
-            <p>
-                • S3 bucket is fully private (block public access ON)<br />
-                • CloudFront serves the content securely over HTTPS<br />
-                • Bucket access allowed only through OAI<br />
-                • Website files deployed using AWS CLI (s3 sync)<br />
-                • Cache invalidation handled via CloudFront invalidation API
-            </p>
+        <div class="hero-right">
+          <img src="assets/hero.jpg" alt="Cloud image" style="width:100%;border-radius:12px" />
         </div>
+      </section>
 
+      <h3 style="margin-top:28px">Featured Project</h3>
+      <div class="card" style="margin-top:12px">
+        <h4>Secure Static Website — S3 + CloudFront + OAI</h4>
+        <p>Private S3 bucket, CloudFront distribution with OAI, CLI-based deployment, and cache invalidation. Live at: <a href="https://dwfvmf1nfh6ut.cloudfront.net" style="color:var(--accent)">CloudFront URL</a></p>
+      </div>
     </div>
+    <!-- END main-content -->
 
-    <footer>
-        Built on AWS | S3 • CloudFront • OAI • CLI  
-    </footer>
+    <footer class="footer">Built with AWS • S3 • CloudFront • OAI</footer>
+  </div>
 
+  <script src="js/main.js" defer></script>
 </body>
 </html>
